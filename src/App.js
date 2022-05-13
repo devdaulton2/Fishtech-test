@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { Component } from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
+import Sitebar from './Components/Sitebar';
+import Home from './Components/Home'
+import ApiFetch from './Components/ApiFetch';
+import Input from './Components/Input';
 
 function App() {
+
+  function componentDidMount() {
+    document.title = "Fishtech Group App"
+  }
+
+  componentDidMount();
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Sitebar />
+      <Home />
+      <Input />
+      <ApiFetch />
     </div>
   );
 }
