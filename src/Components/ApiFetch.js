@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, {useState, useEffect } from 'react';
+import APIRUL from '../environment';
 import Input from './Input';
 
 function ApiFetch() {
@@ -8,7 +9,7 @@ function ApiFetch() {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        axios("http://localhost:3000/search/results")
+        axios(`${APIURL}/search/results`)
             .then(res => {
                 setData(res.data);
                 setLoading(false);
@@ -25,7 +26,7 @@ function ApiFetch() {
     return (
         <div className="resultBox">
             <h5>Your search yielded the following results: </h5>
-                <div>
+                <div className="fetchOutput">
                      <pre>Organization: {JSON.stringify(data.WhoisRecord.registrant.organization, null, 2)}</pre>
                     <pre>Base State: {JSON.stringify(data.WhoisRecord.registrant.state, null, 2)}</pre>
                     <pre>Base Country: {JSON.stringify(data.WhoisRecord.registrant.country, null, 2)}</pre>
