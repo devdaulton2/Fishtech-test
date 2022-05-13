@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, {useState, useEffect } from 'react';
-import APIRUL from '../environment';
+import APIRUL from '../Helpers/environment';
 import Input from './Input';
 
 function ApiFetch() {
