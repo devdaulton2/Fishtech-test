@@ -19,11 +19,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "build:css": "postcss src/index.css -o src/tailwind.css",
-    "watch:css": "postcss src/index.css -o src/tailwind.css -w",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "proxy": "http://localhost:3000",
