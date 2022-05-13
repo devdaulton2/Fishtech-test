@@ -13,7 +13,7 @@ function App() {
   }
 
   componentDidMount();
-  
+
   return (
     <div className="App">
       <Sitebar />
